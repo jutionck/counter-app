@@ -13,7 +13,6 @@ import android.view.ViewGroup;
 import com.polinela.fragment_sample.databinding.FragmentCounterBinding;
 
 public class CounterFragment extends Fragment {
-
     // viewBinding
     private FragmentCounterBinding binding;
     // memanggil aktivity
@@ -25,19 +24,15 @@ public class CounterFragment extends Fragment {
         mainActivity = (MainActivity) getActivity();
     }
 
-    @Nullable
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater,
-                             @Nullable ViewGroup container,
-                             @Nullable Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         binding = FragmentCounterBinding.inflate(inflater, container, false);
         return binding.getRoot();
     }
 
     @Override
-    public void onViewCreated(@NonNull View view,
-                              @Nullable Bundle savedInstanceState) {
+    public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         binding.btnIncrease.setOnClickListener(new View.OnClickListener() {
             @Override

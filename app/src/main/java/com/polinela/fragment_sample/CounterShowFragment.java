@@ -23,11 +23,8 @@ public class CounterShowFragment extends Fragment {
         super.onCreate(savedInstanceState);
     }
 
-    @Nullable
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater,
-                             @Nullable ViewGroup container,
-                             @Nullable Bundle savedInstanceState) {
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         binding = FragmentCounterShowBinding.inflate(inflater, container, false);
         return binding.getRoot();
@@ -35,5 +32,6 @@ public class CounterShowFragment extends Fragment {
 
     public void notifyShowCounter(int counter) {
         Log.i("test", "notifyShowCounter " + counter);
+        binding.counterValue.setText(String.valueOf(counter));
     }
 }
